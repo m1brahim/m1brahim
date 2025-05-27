@@ -129,6 +129,18 @@
       }
     }
 
+    @keyframes techMove {
+      0% {
+        transform: translate(0, 0);
+      }
+      50% {
+        transform: translate(20px, 10px);
+      }
+      100% {
+        transform: translate(0, 0);
+      }
+    }
+
     section::before {
       content: "";
       position: absolute;
@@ -145,7 +157,7 @@
       );
       pointer-events: none;
       z-index: 0;
-      animation: pulseGlow 3s infinite;
+      animation: pulseGlow 3s infinite, techMove 10s ease-in-out infinite;
     }
 
     section > * {
