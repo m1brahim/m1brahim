@@ -6,77 +6,126 @@
   <title>M.Ibrahim Khan - Resume</title>
   <style>
     :root {
-      --primary-color: #007BFF;
-      --background-color: #f4f9ff;
-      --text-color: #333;
+      --primary-color: #3300ff;
+      --background-color: #0d1117;
+      --section-bg-color: #161b22;
+      --text-color: #c9d1d9;
+      --accent-color: #58a6ff;
+    }
+
+    * {
+      box-sizing: border-box;
     }
 
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
       background-color: var(--background-color);
       color: var(--text-color);
+      overflow-x: hidden;
     }
 
     header {
-      background-color: var(--primary-color);
+      background: linear-gradient(135deg, #005377, #00aaff);
       color: white;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
       text-align: center;
+      animation: fadeIn 1s ease-in-out;
     }
 
     nav {
       text-align: center;
       margin-top: 1rem;
+      animation: slideDown 1s ease-in-out;
     }
 
     nav a {
       margin: 0 1rem;
       text-decoration: none;
-      color: var(--primary-color);
+      color: var(--accent-color);
       font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: white;
     }
 
     section {
       max-width: 800px;
       margin: 2rem auto;
-      padding: 1rem;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      padding: 1.5rem;
+      background: var(--section-bg-color);
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
+      animation: fadeInUp 0.8s ease forwards;
     }
 
     h2 {
-      border-bottom: 2px solid var(--primary-color);
+      border-bottom: 2px solid var(--accent-color);
       padding-bottom: 0.5rem;
+      color: var(--accent-color);
     }
 
     .project, .job, .education {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
     }
 
     footer {
       text-align: center;
       padding: 2rem 1rem;
-      background-color: var(--primary-color);
+      background: #003344;
       color: white;
       margin-top: 2rem;
     }
 
     a {
+      color: var(--accent-color);
       word-break: break-word;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes slideDown {
+      from {
+        transform: translateY(-20px);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
   </style>
 </head>
 <body>
   <header>
     <h1>M.Ibrahim Khan</h1>
-    <p>Comp-Sci Major | Problem Solver | Quick learner </p>
+    <p>Comp-Sci Major | Problem Solver | Quick learner</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
     <a href="#experience">Experience</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -84,16 +133,14 @@
   <section id="about">
     <h2>About Me</h2>
     <p>👋 Hi, I'm M.Ibrahim Khan, a Computer Science major at Forman Christian College with a passion for building creative, efficient, and impactful technology solutions.
-        Beyond the classroom, I’m actively involved in social work, where I’ve developed strong teamwork and leadership skills while making a difference in my community. I enjoy blending technical expertise with a sense of purpose—whether I’m developing software or supporting meaningful causes.
-        
-        Welcome to my portfolio—take a look around to see what I've been working on!
-        </p>
+    Beyond the classroom, I’m actively involved in social work, where I’ve developed strong teamwork and leadership skills while making a difference in my community. I enjoy blending technical expertise with a sense of purpose—whether I’m developing software or supporting meaningful causes.
+    Welcome to my portfolio—take a look around to see what I've been working on!</p>
   </section>
 
   <section id="skills">
     <h2>Skills</h2>
     <ul>
-      <li>Python,  C++</li>
+      <li>Python, C++</li>
       <li>Git, Excel, Content Writing</li>
     </ul>
   </section>
@@ -102,7 +149,7 @@
     <h2>Projects</h2>
     <div class="project">
       <h3>HANGMAN</h3>
-      <p>Developed an interactive game(hangmen) as part of an indivual class proect. </p>
+      <p>Developed an interactive game (Hangman) as part of an individual class project.</p>
     </div>
     <div class="project">
       <h3>WEBSITE</h3>
@@ -114,8 +161,7 @@
     <h2>Experience & Education</h2>
     <div class="job">
       <h3>MARKETING MANAGER</h3>
-      <p>I’ve worked as a Marketing Manager for the U.n.I app, blending strategy with creativity to drive user growth. I helped them increase their sign ups by a significant number.
-      </p>
+      <p>I’ve worked as a Marketing Manager for the U.n.I app, blending strategy with creativity to drive user growth. I helped them increase their sign-ups significantly.</p>
     </div>
     <div class="education">
       <h3>B.Sc. in Computer Science</h3>
@@ -130,7 +176,7 @@
   </section>
 
   <footer>
-    &copy; 2025 Your Name. All rights reserved.
+    &copy; 2025 M.Ibrahim Khan. All rights reserved.
   </footer>
 </body>
 </html>
