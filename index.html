@@ -6,7 +6,7 @@
   <title>M.Ibrahim Khan - Resume</title>
   <style>
     :root {
-      --primary-color: #3300ff;
+      --primary-color: #00aaff;
       --background-color: #0d1117;
       --section-bg-color: #161b22;
       --text-color: #c9d1d9;
@@ -44,11 +44,12 @@
       text-decoration: none;
       color: var(--accent-color);
       font-weight: bold;
-      transition: color 0.3s;
+      transition: color 0.3s, transform 0.3s;
     }
 
     nav a:hover {
       color: white;
+      transform: scale(1.1);
     }
 
     section {
@@ -59,6 +60,7 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0, 170, 255, 0.2);
       animation: fadeInUp 0.8s ease forwards;
+      position: relative;
     }
 
     h2 {
@@ -113,6 +115,42 @@
         transform: translateY(0);
         opacity: 1;
       }
+    }
+
+    @keyframes pulseGlow {
+      0% {
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+      }
+      50% {
+        box-shadow: 0 0 20px rgba(0, 170, 255, 0.9);
+      }
+      100% {
+        box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+      }
+    }
+
+    section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: repeating-linear-gradient(
+        45deg,
+        rgba(0, 170, 255, 0.02) 0,
+        rgba(0, 170, 255, 0.02) 1px,
+        transparent 1px,
+        transparent 5px
+      );
+      pointer-events: none;
+      z-index: 0;
+      animation: pulseGlow 3s infinite;
+    }
+
+    section > * {
+      position: relative;
+      z-index: 1;
     }
   </style>
 </head>
